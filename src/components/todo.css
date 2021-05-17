@@ -1,8 +1,33 @@
+body {
+    width: 100%;
+
+
+}
+
 .todoList {
     display: flex;
-    height: 100%;
-    width: 100%;
-    font-size: 100px;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+
+}
+
+.list_item {
+    margin: 5px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 18px;
+    flex: 1;
+    text-decoration: underline;
+    background-color: #6ab6ad;
+    border-radius: 50px;
+}
+
+.completed_item {
+    text-decoration: line-through;
+}
+
+.form_check_input {
+    justify-self: end;
 }

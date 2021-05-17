@@ -29,7 +29,7 @@ function App() {
                />)}
               )
               }
-              <ToDo />
+            
 
           </div>
           <Input />   
