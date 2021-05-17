@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
-import Input from './components/input.js'
-import ToDo from './components/todo.js'
+import Input from './components/input.js';
+import ToDo from './components/todo.js';
 
 const todoList = [{
   item: 'todos',
   done: false,
-  id: 8989, },
+  id: 8989},
   {
     item: 'second',
     done: true,
-    id: 8080,
+    id: 8080
   }
 ]
 
@@ -21,14 +21,15 @@ function App() {
           <div className='todo_container'>
 
             {
-              todoList.map(item=>{
-                <ToDo name={item.item} 
+              todoList.map( item => { return(
+                <ToDo 
+                      name={item.item}
                       done={item.done}
                       id={item.id}
-                />
-
-              })
-            }
+               />)}
+              )
+              }
+              <ToDo />
 
           </div>
           <Input />   

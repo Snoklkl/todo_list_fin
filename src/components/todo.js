@@ -2,7 +2,7 @@ import React from 'react'
 import './todo.css'
 
 
-const ToDo = ( name, done, id) => {
+const ToDo = ( {name, done, id}) => {
 
 
 
