@@ -1,0 +1,6 @@
+.todoList {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    font-size: 100px;
+}

@@ -4,4 +4,15 @@
   display: grid;
   background-color: #778587;
   place-items: center;
+
+}
+
+
+.container {
+  height: 700px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

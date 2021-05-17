@@ -2,17 +2,19 @@ import React from 'react'
 import './todo.css'
 
 
-const ToDo = () => {
+const ToDo = ( name, done, id) => {
 
 
 
     return (   
         <div className='todoList'>
-            Hi
+            
+
+            <p> {name} </p>
         </div>
     )
 
 
 }
 
-export default ToDo()
+export default ToDo
