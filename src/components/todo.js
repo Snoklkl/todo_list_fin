@@ -6,9 +6,13 @@ const ToDo = () => {
 
 
 
-    render (
-
+    return (   
+        <div className='todoList'>
+            Hi
+        </div>
     )
 
 
 }
+
+export default ToDo()
