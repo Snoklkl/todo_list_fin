@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Input from './components/input.js';
 import ToDo from './components/todo.js';
+import Nav from './components/navbar.js';
 
 import {useSelector} from 'react-redux'
 import { selectTodoList } from './features/todoSlice.js'
@@ -12,7 +13,12 @@ function App() {
 
   return (
     <div className="App">
+      <div className="nav">
+        <Nav/>
+      </div>
+
         <div className='container'>
+          
           <div className='todo_container'>
 
             {

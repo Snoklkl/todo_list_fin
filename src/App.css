@@ -5,8 +5,14 @@
   background-color: #778587;
   place-items: center;
   overflow: hidden;
+  align-items: start;
 }
 
+.nav {
+  display: flex;
+
+  width: 100%;
+}
 
 .container {
   min-height: 700px;
@@ -16,7 +22,7 @@
   align-items: center;
   justify-content: center;
   background-color: #D3D3D3;
-  
+
 }
 
 .todo_container {
