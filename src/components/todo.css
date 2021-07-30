@@ -14,13 +14,13 @@ body {
     margin: 5px;
     padding-left: 20px;
     padding-top: 15px;
-    color: white;
+    color: black;
     font-size: 28px;
     text-decoration: underline;
-    background-color: #6ab6ad;
+    background-color: #F2EFE8;
     border-radius: 50px;
     flex: 1;
-
+    font-weight: bold;
 }
 
 

@@ -4,25 +4,23 @@ import  {useDispatch}  from 'react-redux';
 import {toggleCheck, removeTodo} from '../features/todoSlice.js'
 
 const ToDo = ( {name, done, id}) => {
-
-    
-  
-
-    const deleteTodo = ()  => {
-        dispatch(removeTodo(id))
-    }
-
-    const dispatch = useDispatch()
-
-    const itemDone = () => {
-      dispatch(toggleCheck(id))
-        
-        
-    }
-
     let inputStyle = {
-        textDecoration: "line-through"
+        visibility: "line-through"
     };
+    const changeView = (view) => {
+        if (view === "all") {
+            
+        }
+        else if (view === "done") {
+
+        }
+
+        else{
+
+        }
+
+    }
+    
     if (done === true){
         inputStyle = {
             textDecoration: 'line-through'

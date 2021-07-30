@@ -22,7 +22,7 @@ export default function App() {
     
     <div className="nav">
            <Router>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <Link class="navbar-brand" to="/">Todo</Link>
 
             <ul class="navbar-nav mr-auto">
@@ -34,9 +34,7 @@ export default function App() {
                 <li class="nav-item active">
                     <Link class="nav-link" to="/Contact">Contact <span class="sr-only">(current)</span></Link>
                 </li>
-                <li class="nav-item active">
-                    <Link class="nav-link" to="/Users">Users <span class="sr-only">(current)</span></Link>
-                </li>
+             
                 
             </ul>
 
@@ -48,9 +46,6 @@ export default function App() {
                   <Route path="/about">
                     <About />
                   </Route>
-                  <Route path="/users">
-                    <Users />
-                  </Route>  
                   <Route path="/Contact">
                     <Contact />
                   </Route>
@@ -76,7 +71,7 @@ function Home() {
     <div className='container'>
       
       <div className='todo_container'>
-
+        
         {
           todoList.map( item => { return(
             <ToDo 
@@ -104,9 +99,9 @@ function About() {
   </div>
 
     <div className='container'>
-      <h1> This is a test website made by Noah Cress. </h1>
+      <h3> This was a test project to learn react, react-redux, and react-router.</h3>
     
-      <h3> This project was made with react, react-redux, and react-router. If you are seeing this, thank you for checking it out!</h3>
+      <h3> -Noah Cress</h3>
 
       <div className='todo_container'>
 
@@ -138,7 +133,7 @@ function Contact() {
         <div class="form-group">
           <label for="EmailInput">Email</label>
           <input type="email" class="form-control" id="Email" placeholder="Enter your email" />
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
           <label  for="Textarea">Say hi!</label>
@@ -154,24 +149,3 @@ function Contact() {
     </div>
 </div>)
 }
-
-function Users() {
-
-  return (
-  <div className="App">
-  <div className="nav">
-  </div>
-
-    <div className='container'>
-    <h1> There are no users, because this isnt a real website. </h1>
-      <div className='todo_container'>
-
-      
-
-      </div>
-        
-    </div>
-</div>)
-}
-
-
