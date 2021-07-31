@@ -3,9 +3,9 @@ import './todo.css'
 import  {useDispatch}  from 'react-redux';
 import {toggleCheck, removeTodo} from '../features/todoSlice.js'
 
-const ToDo = ( {name, done, id}) => {
 
-    
+const ToDo = ( {name, done, id, visible}) => {
+
   
 
     const deleteTodo = ()  => {
@@ -16,8 +16,6 @@ const ToDo = ( {name, done, id}) => {
 
     const itemDone = () => {
       dispatch(toggleCheck(id))
-        
-        
     }
 
     let inputStyle = {
@@ -28,39 +26,51 @@ const ToDo = ( {name, done, id}) => {
             textDecoration: 'line-through'
         }
     }
-
     else{
         inputStyle = {
-            textDecoration: 'none'
+            textDecoration: 'none',
         }
     }
-    
-    
 
-
-
+    let visStyle = {
+        display: "block"
+    }
+    if (visible === true){
+        visStyle = {
+            display: 'block'
+        }
+    }
+    else{
+        visStyle = {
+            display: 'none',
+        }
+    }
+   
     return (   
     
-        <div className='todoList'>
-    
-
-            <button style={inputStyle} onClick={itemDone} className={'list_item'} >
+        <div style={{visStyle}} className='todoList'>
+         
+         
+                
+            <button style={{...inputStyle, ...visStyle}} onClick={itemDone} className={'list_item'}>
                     <p id={id}>
                   {name}
                 
                     </p>
-                    
+                    <button class="bi bi-trash" property={done} onClick={deleteTodo} ></button>
                </button>
-               <button class="bi bi-trash" onClick={deleteTodo} ></button>
-                                        
-                            
+                    
+                </div>
+        
+       
 
 
-        </div>
     
 
     )
 }
+
+
 
 
 export default ToDo

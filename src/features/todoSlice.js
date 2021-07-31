@@ -41,7 +41,61 @@ const todoSlice = createSlice({
                 }
             
             },
-            
+        
+            filterDone: (state, action) => {
+                void(
+                state.todoList.map(item => { 
+                   
+                    if (true) 
+                          
+                        {
+                        if (item.done === true) {
+                            
+                            item.visible = true;
+                        }
+                        else if (item.done === false) {
+                            item.visible = false
+                        }
+
+                    }
+                return(item.done);
+                }))
+            },
+            filterAll: (state, action) => {
+                void(
+                state.todoList.map(item => { 
+                   
+                    if (true) 
+                          
+                        {
+                        if (true) {
+                            
+                            item.visible = true;
+                        }
+
+                    }
+                return(item.done);
+                }))
+            },
+            filterUn: (state, action) => {
+                void(
+                state.todoList.map(item => { 
+                   
+                    if (true) 
+                          
+                        {
+                        if (item.done === false) {
+                            
+                            item.visible = true;
+                        }
+                        else if (item.done === true) {
+                            item.visible = false
+                        }
+
+                    }
+                return(item.done);
+                }))
+            },
 
         
         
@@ -49,7 +103,7 @@ const todoSlice = createSlice({
 }
 });
 
-export const { saveToDo, toggleCheck, removeTodo } = todoSlice.actions
+export const { saveToDo, toggleCheck, removeTodo, filterDone, filterAll, filterUn } = todoSlice.actions
 
 export const selectTodoList = state => state.todos.todoList
 

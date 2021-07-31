@@ -14,21 +14,21 @@ const Input = () => {
 
         dispatch(saveToDo({
             
-
+            visible: true,
             item: input,
             done: false,
-            id: Date.now()
+            id: Date.now(),
 
 
          } ) )
     }
-
+    
     return (
         <div className='input'>
 
             <input type="text" value={input} onChange={e => setInput(e.target.value)} /> 
             <button onClick={addToDo}> Add Task!  </button>
-       
+        
 
         </div>
     )

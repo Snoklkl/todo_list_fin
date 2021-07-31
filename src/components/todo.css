@@ -1,25 +1,26 @@
 body {
     width: 100%;
-
-
+    
 }
 
 .todoList {
     display: flex;
     align-items: center;
-
+    justify-items: center;
+}
+.bi {
+    margin: auto;
 }
 
 .list_item {
-    margin: 5px;
-    padding-left: 20px;
-    padding-top: 15px;
+    margin: auto;
+    margin-top: 2rem;
+    width: 25rem;
     color: black;
-    font-size: 28px;
+    font-size: 14px;
     text-decoration: underline;
     background-color: #F2EFE8;
     border-radius: 50px;
-    flex: 1;
     font-weight: bold;
 }
 

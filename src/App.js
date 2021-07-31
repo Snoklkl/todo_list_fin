@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import './App.css';
 import Input from './components/input.js';
 import ToDo from './components/todo.js';
-
+import Change from './components/change.js'
 
 import {useSelector} from 'react-redux'
-import { selectTodoList } from './features/todoSlice.js'
+import { filterVisible, selectTodoList } from './features/todoSlice.js'
 
 import {
   BrowserRouter as Router,
@@ -15,10 +15,13 @@ import {
 } from "react-router-dom"
 
 
-export default function App() {
 
+export default function App() {
+  
 
   return (
+            
+
     
     <div className="nav">
            <Router>
@@ -60,8 +63,12 @@ export default function App() {
   );
 }
 
+
 function Home() {
   const todoList = useSelector(selectTodoList)
+
+
+
   return (
   <div className="App">
   <div className="nav">
@@ -71,20 +78,26 @@ function Home() {
     <div className='container'>
       
       <div className='todo_container'>
-        
+      <Change />
         {
           todoList.map( item => { return(
             <ToDo 
+          
                   name={item.item}
                   done={item.done}
                   id={item.id}
+                  visible={item.visible}
+                  
            />)}
           )
           }
-        
+          
+     
+          
 
       </div>
-      <Input />   
+      <Input  />  
+           
     </div>
 </div>
   )
@@ -136,7 +149,7 @@ function Contact() {
           <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
-          <label  for="Textarea">Say hi!</label>
+          <label  for="Textarea">Message</label>
           <textarea type="text" rows="3" class="form-control" id="Message" > </textarea>
         
         </div>
