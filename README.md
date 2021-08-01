@@ -1,9 +1,14 @@
 Name: Noah Cress
+
 Overview: Todo list application
+
 Details: Allows a user to add a task to a to do list, indicate whether a task has been finished, remove a task, and choose which of 
-the tasks are shown based on whether they are finished or not. 
+the tasks are shown based on whether they are finished or not. There is also a page that has a contact form that updates as the user types into the input fields.
+
 Technologies: React, React-redux, React-router
-Ideas for the future: - Create tasks that indicate some sort of timer or countdown
+
+Ideas for the future: 
+- Create tasks that indicate some sort of timer or countdown
 - Assign tasks with some attribute that denotes the urgency of their completion
 - Be able to freely move tasks around so the order can be changed in a simple manner.
 
