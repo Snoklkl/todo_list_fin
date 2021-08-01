@@ -3,9 +3,11 @@ import './App.css';
 import Input from './components/input.js';
 import ToDo from './components/todo.js';
 import Change from './components/change.js'
+import ContactForm from './components/form.js'
 
 import {useSelector} from 'react-redux'
 import { filterVisible, selectTodoList } from './features/todoSlice.js'
+
 
 import {
   BrowserRouter as Router,
@@ -93,8 +95,9 @@ function Home() {
           }
           
      
-          
-
+        
+       
+        
       </div>
       <Input  />  
            
@@ -133,32 +136,15 @@ function Contact() {
   <div className="nav">
   </div>
 
-    <div className='container'>
+    
       
-      <div className='todo_container'>
+      <div className='form_container'>
 
-      <form>
-          <div class="form-group">
-          <label for="NameInput"> Name </label>
-          <input type="text" class="form-control" id="Name" aria-describedby="emailHelp" placeholder="Enter your name" />
-          
-          </div>
-        <div class="form-group">
-          <label for="EmailInput">Email</label>
-          <input type="email" class="form-control" id="Email" placeholder="Enter your email" />
-          <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label  for="Textarea">Message</label>
-          <textarea type="text" rows="3" class="form-control" id="Message" > </textarea>
-        
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+      <ContactForm />
         
 
       </div>
       
-    </div>
+   
 </div>)
 }
