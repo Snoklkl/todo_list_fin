@@ -1,27 +1,27 @@
+//Imports:
 import React, {useState} from 'react'
 import { Field, Form } from 'react-final-form'
 import  {useDispatch}  from 'react-redux'
 import {saveForm} from '../features/formSlice.js'
 import  render  from 'react-dom'
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
+//Const that would work to deal with submissions:
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 const onSubmit = async values => {
   await sleep(300)
   window.alert(JSON.stringify(values, 0, 2))
 }
-
+//Form module that will be used by App.js:
 let ContactForm = props => {
+    //Consts and function to update state of the form:
     const [form , setForm ] = useState('')
-
     const dispatch = useDispatch()  
     const addForm = () => {
-    
       dispatch(saveForm({
           Form: form,
-
        } ) )
   }
-    
+  //Returns the form to contact, onchanges to the form will update the state's value to properly reflect the form:
   return (
     <Form onSubmit={onSubmit}
          render={({ handleSubmit, form, submitting, pristine, values }) => (
@@ -63,12 +63,9 @@ let ContactForm = props => {
             </Field>
       </div>
       <button class="formSubmit" type="submit">Submit</button>
-   
       </form>
          )}
     />
   )
 }
-
-
 export default ContactForm;
